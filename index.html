@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body> 
+    <div id="warp">
+        <div class="warp_in_header">
+            <div class="logo">
+                <ul>
+                   <li><a href="https://opensea.io/collection/project-spoon-dao"><img src="img/open.png"></a></li>
+                   <li><a href="https://discord.com/invite/9Yh8cdWcRq"><img src="img/disco.png"></a></li>
+                   <li><a href="https://twitter.com/SPOONDAO"><img src="img/twitter.png"></a></li>
+                   <li><a href="https://open.kakao.com/o/gNdEnOPd"><img src="img/ka.png"></a></li>
+               </ul>
+            </div>
+            <div class="content">
+                <h1 class="main_text">SPOON Rarity Rank</h1>
+                <img class="spoon_img" src="img/myspoon.png" alt="">
+                <p class="info_t">※사진 로딩이 네트워크 상황에 따라 오래걸릴 수 있습니다.※</p>
+                <p class="info_t">※등급은 만든이가 확률을 보고 임의로 정한 등급입니다.※</p>
+                <form class="form_fild" onsubmit="return false">
+                    <input type='number' placeholder="번호를 입력해주세요." class="textinput" min='1' max='10000'>
+                    <input type='submit' onclick="getInputValue();" value="확인">
+                </form>
+            </div>
+            <ul class="rank_info">
+                <li class="bg">
+                    <p class="i_name">Background</p>
+                    <p class="rank_rond">(SSS ~ C)</p>
+                    <p class="na"></p>
+                </li>
+                <li class="bd">
+                    <p class="i_name">Body</p>
+                    <p class="rank_rond">(SSS ~ D)</p>
+                    <p class="na"></p>
+                </li>
+                <li class="ey">
+                    <p class="i_name">Eye</p>
+                    <p class="rank_rond">( SSS ~ B )</p>
+                    <p class="na"></p>
+                </li>
+                <li class="no">
+                    <p class="i_name">Nose</p>
+                    <p class="rank_rond">( SSS ~ A )</p>
+                    <p class="na"></p>
+                </li>
+                <li class="mo">
+                    <p class="i_name">Mouth</p>
+                    <p class="rank_rond">( SSS ~ C )</p>
+                    <p class="na"></p>
+                </li>
+                <li class="cl">
+                    <p class="i_name">Cloth</p>
+                    <p class="rank_rond">( SSS ~ D ) </p>
+                    <p class="na"></p>
+                </li>
+                <li class="ha">
+                    <p class="i_name">Hair</p>
+                    <p class="rank_rond">( SSS ~ C )</p>
+                    <p class="na"></p>
+                </li>
+                <li class="fa">
+                    <p class="i_name">Face</p>
+                    <p class="rank_rond">(SSS ~ F)</p>
+                    <p class="na"></p>
+                </li>
+                <li class="we">
+                    <p class="i_name">Weapon</p>
+                    <p class="rank_rond">(SSS ~ D)</p>
+                    <p class="na"></p>
+                </li>
+            </ul>
+        </div>
+    </div>   
+</body>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+var background = {}
+    background['background1'] = 'A';
+    background['background2'] = 'SS';
+    background['background3'] = 'A';
+    background['background4'] = 'S';
+    background['background5'] = 'A';
+    background['background6'] = 'B+';
+    background['background7'] = 'B';
+    background['background8'] = 'B+';
+    background['background9'] = 'B';
+    background['background10'] = 'B';
+    background['background11'] = 'C-';
+    background['background12'] = 'C';
+    background['background13'] = 'C';
+    background['background14'] = 'C-';
+    background['background15'] = 'C';
+    background['background16'] = 'C';
+    background['background17'] = 'C';
+    background['background18'] = 'C';
+    background['background_founder'] = 'Founder';
+    background['backgroundrare'] = 'SSS';
+
+
+
+    var body = {}
+    body['body1'] = "SS";
+    body['body2'] = "SSS";
+    body['body3'] = "S";
+    body['body4'] = "A";
+    body['body5'] = "B";
+    body['body6'] = "SSS";
+    body['body7'] = "SSS";
+    body['body8'] = "D";
+    body['body9'] = "D";
+    body['body10'] = "D";
+    body['body11'] = "C-";
+    body['body12'] = "D";
+    body['body13'] = "C";
+    body['body14'] = "D";
+    body['body15'] = "D";
+    body['body16'] = "D";
+    body['body17'] = "C-";
+
+
+    var eye = {}
+    eye['eyes1'] = "A";
+    eye['eyes2'] = "S";
+    eye['eyes3'] = "B";
+    eye['eyes4'] = "B";
+    eye['eyes5'] = "SSS";
+    eye['eyes6'] = "A";
+    eye['eyes7'] = "SS";
+    eye['eyes8'] = "A";
+    eye['eyes9'] = "A";
+
+    var nose = {}
+    nose['nose1'] = "SSS";
+    nose['nose2'] = "SS";
+    nose['nose3'] = "A";
+    nose['nose4'] = "S";
+
+    var mouth = {}
+    mouth['mouth1'] = "S";
+    mouth['mouth2'] = "S";
+    mouth['mouth3'] = "C";
+    mouth['mouth4'] = "S";
+    mouth['mouth5'] = "B";
+    mouth['mouth6'] = "A";
+    mouth['mouth7'] = "SSS";
+    mouth['mouth8'] = "A";
+    mouth['mouth9'] = "SS";
+    mouth['mouth10'] = "S";
+
+    
+    var cloth = {}
+    cloth['cl1'] = "S"; 
+    cloth['cl2'] = "S"; 
+    cloth['cl3'] = "SS"; 
+    cloth['cl4'] = "SS"; 
+    cloth['cl5'] = "S"; 
+    cloth['cl6'] = "SS"; 
+    cloth['cl7'] = "S"; 
+    cloth['cl8'] = "S"; 
+    cloth['cl9'] = "SS"; 
+    cloth['cl10'] = "SS"; 
+    cloth['cl11'] = "SS"; 
+    cloth['cl12'] = "A"; 
+    cloth['cl13'] = "B"; 
+    cloth['cl14'] = "C"; 
+    cloth['cl15'] = "C"; 
+    cloth['cl16'] = "D"; 
+    cloth['cl17'] = "B"; 
+    cloth['cl18'] = "C"; 
+    cloth['cl19'] = "D"; 
+    cloth['cl20'] = "D"; 
+    cloth['cl21'] = "C"; 
+    cloth['cl22'] = "B"; 
+    cloth['cl23'] = "C"; 
+    cloth['cl24'] = "C"; 
+    cloth['cl25'] = "B"; 
+    cloth['cl26'] = "C"; 
+    cloth['cl27'] = "C"; 
+    cloth['cl28'] = "C"; 
+    cloth['cl29'] = "C"; 
+    cloth['cl30'] = "C"; 
+    cloth['cl31'] = "C"; 
+    cloth['cl32'] = "C"; 
+    cloth['cl33'] = "C"; 
+    cloth['cl34'] = "C"; 
+    cloth['cl35'] = "C"; 
+    cloth['cl36'] = "SSS"; 
+    cloth['cl37'] = "SSS"; 
+    cloth['cl38'] = "SSS"; 
+    cloth['cl39'] = "SSS"; 
+    cloth['cl40'] = "SSS"; 
+    cloth['cl41'] = "SSS"; 
+
+    var hair = {}
+    hair['hair1'] = "S";
+    hair['hair2'] = "SS";
+    hair['hair3'] = "SS";
+    hair['hair4'] = "SS";
+    hair['hair5'] = "S";
+    hair['hair6'] = "SS";
+    hair['hair7'] = "A";
+    hair['hair8'] = "S";
+    hair['hair9'] = "SS";
+    hair['hair10'] = "SS";
+    hair['hair11'] = "SS";
+    hair['hair12'] = "S";
+    hair['hair13'] = "SS";
+    hair['hair14'] = "SS";
+    hair['hair15'] = "C";
+    hair['hair16'] = "B";
+    hair['hair17'] = "A";
+    hair['hair18'] = "C";
+    hair['hair19'] = "C";
+    hair['hair20'] = "A";
+    hair['hair21'] = "C";
+    hair['hair22'] = "A";
+    hair['hair23'] = "A";
+    hair['hair24'] = "C";
+    hair['hair25'] = "B";
+    hair['hair26'] = "B";
+    hair['hair27'] = "B";
+    hair['hair28'] = "A";
+    hair['hair29'] = "C";
+    hair['hair30'] = "A";
+    hair['hair31'] = "C";
+    hair['hair32'] = "C";
+    hair['hair33'] = "C";
+    hair['hair34'] = "C";
+    hair['hair35'] = "C";
+    hair['hair36'] = "C";
+    hair['hair37'] = "C";
+    hair['hair38'] = "C";
+    hair['hair39'] = "SSS";
+    hair['hair40'] = "SSS";
+    hair['hair41'] = "SSS";
+    hair['hair42'] = "SSS";
+    hair['hair43'] = "SSS";
+    hair['hair44'] = "SSS";
+    
+    var face = {}
+    face['face1'] = "SSS"
+    face['face2'] = "SS"
+    face['face3'] = "A"
+    face['face4'] = "SS"
+    face['face5'] = "S"
+    face['face6'] = "S"
+    face['face7'] = "A"
+    face['face8'] = "A-"
+    face['face9'] = "C"
+    face['face10'] = "C"
+    face['face11'] = "C"
+    face['face12'] = "D"
+    face['face13'] = "C"
+    face['face14'] = "D"
+    face['face15'] = "D"
+    face['face16'] = "C"
+    face['face17'] = "B"
+    face['face18'] = "C"
+    face['face19'] = "B"
+    face['face20'] = "B"
+    face['face21'] = "C"
+    face['face22'] = "C"
+    face['face23'] = "F"
+
+    var weapon = {}
+    weapon['wp1'] = "SS"
+    weapon['wp2'] = "A"
+    weapon['wp3'] = "SSS"
+    weapon['wp4'] = "S"
+    weapon['wp5'] = "S"
+    weapon['wp6'] = "SSS"
+    weapon['wp7'] = "SS"
+    weapon['wp8'] = "A"
+    weapon['wp9'] = "SSS"
+    weapon['wp10'] = "S"
+    weapon['wp11'] = "S"
+    weapon['wp12'] = "SS"
+    weapon['wp13'] = "D"
+    weapon['wp14'] = "B"
+    weapon['wp15'] = "D"
+    weapon['wp16'] = "C"
+    weapon['wp17'] = "B"
+    weapon['wp18'] = "D"
+    weapon['wp19'] = "D"
+    weapon['wp20'] = "C"
+    weapon['wp21'] = "C"
+    weapon['wp22'] = "B"
+    weapon['wp23'] = "B"
+    weapon['wp24'] = "B"
+    weapon['wp25'] = "B"
+    weapon['wp26'] = "C"
+    weapon['wp27'] = "B"
+    weapon['wp28'] = "B"
+    weapon['wp29'] = "D"
+
+
+    var bgn, bg, bd, ey, no, mo, cl, ha, fa, we, img;
+
+    function getInputValue(){
+        var input = $('.textinput').val()
+
+        if(input <= 10000 && input >= 0){
+
+            var obj = "https://spoondao.mypinata.cloud/ipfs/QmVizxz78ouUoKwZADs8UcYDuzVR2axy27UWKkbDMDyBmL/" + input + ".json"
+            var fff = "https://opensea.io/assets/klaytn/0xc0e6ca567b516a6e64d63023d169ca4e57e62c1c/" + input
+            $(document).ready(function(){
+                $.getJSON(obj, function(data){
+
+                    var html = [];
+
+                    bg = background[data.attributes[0].value]
+
+                    bd = body[data.attributes[1].value]
+                    ey = eye[data.attributes[2].value]
+                    no = nose[data.attributes[3].value]
+                    mo = mouth[data.attributes[4].value]
+                    cl = cloth[data.attributes[5].value]
+                    ha = hair[data.attributes[6].value]
+                    fa = face[data.attributes[7].value]
+                    we = weapon[data.attributes[8].value]         
+                    img = data.image
+                    
+                        
+                    $(".spoon_img").attr("src","")
+                    $(".ifff").attr("src",fff)
+                    $(".rank_info").css("display","block")
+
+                    
+
+                    $(".bg .na").text(bg)
+                    $(".bd .na").text(bd)
+                    $(".ey .na").text(ey)
+                    $(".no .na").text(no)
+                    $(".mo .na").text(mo)
+                    $(".cl .na").text(cl)
+                    $(".ha .na").text(ha)
+                    $(".fa .na").text(fa)
+                    $(".we .na").text(we)
+
+                    $(".spoon_img").attr("src",img)
+                })
+            })
+        }
+    }
+</script>
+</html>
