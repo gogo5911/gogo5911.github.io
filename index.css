@@ -1,0 +1,73 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+html, body{font-family: 'Nanum Gothic', sans-serif; overflow-x:hidden;}
+
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+a{
+	text-decoration:none;
+}
+table {
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong{
+	font-weight: bold;
+}
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+caption,th {
+    text-align: left;
+
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+    color:#444;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
+}
+
+
+
+#warp{top: 0;  left: 0; min-width: 100%; min-height: 100%; background-image: url('img/background.jpg'); background-size: cover;}
+.warp_in_header{width: 1300px; margin:0 auto;}
+.logo{padding:20px 50px 200px 50px;}
+.logo ul {text-align: right;}
+.logo ul li{margin-left:20px; display: inline-block;}
+.logo ul li img{width: 100px;}
+
+
+.content{text-align: center;}
+.spoon_img{width: 500px; height: 500px}
+.main_text{font-size: 60px;font-weight: bold; margin-bottom:100px}
+.info_t{margin-top: 15px; font-size: 20px;}
+.form_fild{margin-top: 40px}
+
+.textinput{width:500px;height:25px;}
+
+.rank_info{display: none; margin-top: 100px; text-align: center;margin-bottom: 200px}
+.rank_info li{display: inline-block; width: 100px;height:50px}
+.rank_info li .i_name{border: 1px solid #000; padding: 2px; margin-bottom: 1px; font-size: 15px;font-weight: bold;}
+.rank_info li .rank_rond{border: 1px solid #000; padding: 2px; margin-bottom: 1px;}
+.rank_info li .na{border: 1px solid #000; padding: 2px; font-size:20px; font-weight:bold;}
