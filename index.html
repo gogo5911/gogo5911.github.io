@@ -33,7 +33,9 @@
                     <input type='submit' onclick="getInputValue();" value="확인">
                 </form>
             </div>
+           
             <ul class="rank_info">
+                 <h1 class="Rank">4856</h1>
                 <li class="bg">
                     <p class="i_name">Background</p>
                     <p class="rank_rond">(SSS ~ C)</p>
@@ -82,7 +84,7 @@
             </ul>
         </div>
     </div>   
-</body>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script>
@@ -310,18 +312,21 @@ var background = {}
 
     function getInputValue(){
         var input = $('.textinput').val()
-
+        
         if(input <= 10000 && input >= 0){
-
+            
+            
+            var ranknum;
+            
             $.ajax({
                 url: 'Spoon_rank.CSV',
                 dataType: 'text',
               }).done(successFunction);
 
             function successFunction(data){
+                var tmpinput = input - 1
                 var allRows = data.split(/\r?\n|\r/);
-                var rowCells = allRows[input].split(',');
-                alert(rowCells);
+                ranknum = allRows[tmpinput].split(',');
             }
             
 
@@ -350,7 +355,7 @@ var background = {}
                     $(".ifff").attr("src",fff)
                     $(".rank_info").css("display","block")
 
-                    
+                    $(".Rank").text("★ "+ ranknum + "등 ★")
 
                     $(".bg .na").text(bg)
                     $(".bd .na").text(bd)
