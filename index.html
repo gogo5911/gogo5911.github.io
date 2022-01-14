@@ -84,6 +84,7 @@
     </div>   
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <script>
 var background = {}
     background['background1'] = 'A';
@@ -311,6 +312,17 @@ var background = {}
         var input = $('.textinput').val()
 
         if(input <= 10000 && input >= 0){
+
+            $.ajax({
+                url: 'Spoon_rank.CSV',
+                dataType: 'text',
+              }).done(successFunction);
+
+            function successFunction(data){
+                alert(data)
+            }
+            
+
 
             var obj = "https://spoondao.mypinata.cloud/ipfs/QmVizxz78ouUoKwZADs8UcYDuzVR2axy27UWKkbDMDyBmL/" + input + ".json"
             var fff = "https://opensea.io/assets/klaytn/0xc0e6ca567b516a6e64d63023d169ca4e57e62c1c/" + input
