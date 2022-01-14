@@ -319,7 +319,9 @@ var background = {}
               }).done(successFunction);
 
             function successFunction(data){
-                alert(data[input])
+                var allRows = data.split(/\r?\n|\r/);
+                var rowCells = allRows[input].split(',');
+                alert(rowCells);
             }
             
 
