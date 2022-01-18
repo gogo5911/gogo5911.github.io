@@ -66,9 +66,10 @@ abbr,acronym { border: 0;
 
 .textinput{width:500px;height:25px;}
 
-.rank_info{display: none; margin-top: 100px; text-align: center;margin-bottom: 200px}
+.rank_info{ margin-top: 100px; text-align: center;margin-bottom: 200px}
 .Rank{font-size:50px;margin-bottom: 100px; color:#ffd800}
 .rank_info li{display: inline-block; width: 100px;height:50px}
 .rank_info li .i_name{border: 1px solid #000; padding: 2px; margin-bottom: 1px; font-size: 15px;font-weight: bold;}
 .rank_info li .rank_rond{border: 1px solid #000; padding: 2px; margin-bottom: 1px;}
 .rank_info li .na{border: 1px solid #000; padding: 2px; font-size:20px; font-weight:bold;}
+.rank_info li .mask{border: 1px solid #000; padding: 2px;}
