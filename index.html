@@ -100,41 +100,42 @@
 
 
                     $(".spoon_img").attr("src",img)
+
+                    $(document).ready(function(){
+                        $.getJSON(item, function(itemdata){
+                            
+                            $(".rank_info").empty();
+                            $(".rank_info").append("<h1 class='Rank'>4856</h1>");
+                            $(".Rank").text("★ "+ ranknum + "등 ★")
+                            
+                            var listArray = [itemdata.background, itemdata.body, itemdata.eye, itemdata.nose, itemdata.mouth,
+                                             itemdata.cloth, itemdata.hair, itemdata.face,  itemdata.weapon,  itemdata.ani, itemdata.pin]
+                            var list = ["background", "body", "eye", "nose", "mouth", "cloth", "hair" ,"face","weapon","ani","pin"]
+                            var rank_list = ["SSS~D", "SSS~D" ,"SSS~S", "SSS~S", "SSS~S","SSS~D","SSS~C-","SSS~F","SSS~D","none","none"]
+                            
+                            for (var i = 0; i < 11; i++) {
+                                var dataset = listArray[i];
+                                
+                                $.each(dataset, function (idx, row) {
+                                    
+                                    if (dataset[idx].name == valuelist[i]) {
+                                        //alert(dataset[idx]["rank"] + dataset[idx]["name"],dataset[idx]["score"],dataset[idx]["image"]);
+                                        $(".rank_info").append("<li class='bg'><p class='i_name'>" + list[i] + "</p><p style='height:50px' class='i_name'>" + dataset[idx]["name"] + "</p><p class='rank_rond'>" + rank_list[i]  + "</p><p class='mask'><img style='width: 100%;' src='img/mask/"+ dataset[idx]["image"]  +"'></p><p class='na'>"+ dataset[idx]["rank"] +"</p><p class='na'>"+ dataset[idx]["score"] +"</p></li>");
+                                    }
+
+                                    })
+
+                            }      
+                        })
+                    })
+
+
                 })
             })
             
 
 
-            $(document).ready(function(){
-                $.getJSON(item, function(itemdata){
-                    
-                    $(".rank_info").empty();
-                    $(".rank_info").append("<h1 class='Rank'>4856</h1>");
-                    $(".Rank").text("★ "+ ranknum + "등 ★")
-                    
-                    var listArray = [itemdata.background, itemdata.body, itemdata.eye, itemdata.nose, itemdata.mouth,
-                                     itemdata.cloth, itemdata.hair, itemdata.face,  itemdata.weapon,  itemdata.ani, itemdata.pin]
-                    var list = ["background", "body", "eye", "nose", "mouth", "cloth", "hair" ,"face","weapon","ani","pin"]
-                    var rank_list = ["SSS~D", "SSS~D" ,"SSS~S", "SSS~S", "SSS~S","SSS~D","SSS~C-","SSS~F","SSS~D","none","none"]
-                    
-                    for (var i = 0; i < 11; i++) {
-                        var dataset = listArray[i];
-                        
-                        $.each(dataset, function (idx, row) {
-                            
-                            if (dataset[idx].name == valuelist[i]) {
-                                //alert(dataset[idx]["rank"] + dataset[idx]["name"],dataset[idx]["score"],dataset[idx]["image"]);
-                                $(".rank_info").append("<li class='bg'><p class='i_name'>" + list[i] + "</p><p style='height:50px' class='i_name'>" + dataset[idx]["name"] + "</p><p class='rank_rond'>" + rank_list[i]  + "</p><p class='mask'><img style='width: 100%;' src='img/mask/"+ dataset[idx]["image"]  +"'></p><p class='na'>"+ dataset[idx]["rank"] +"</p><p class='na'>"+ dataset[idx]["score"] +"</p></li>");
-
-
-
-                            }
-
-                            })
-
-                    }      
-                })
-            })
+            
             
             
         }
