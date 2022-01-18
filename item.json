@@ -18,8 +18,8 @@
 {"name": "gradient 6","score": 8.56,"rank": "C", "image":"background/16.png"},
 {"name": "gradient 7","score": 8.71,"rank": "D", "image":"background/17.png"},
 {"name": "gradient 8","score": 8.4,"rank": "C", "image":"background/18.png"},
-{"name": "flowing universe","score": 0.25,"rank": "SSS", "image":"background/founder.png"},
-{"name": "golden planet","score": 5,"rank": "Founder", "image":"background/rare.png"}
+{"name": "flowing universe","score": 0.25,"rank": "SSS", "image":"background/rare.png"},
+{"name": "golden planet","score": 5,"rank": "Founder", "image":"background/founder.png"}
 ],
 
 "body" : [
