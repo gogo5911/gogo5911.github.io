@@ -11,134 +11,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="style.css" />
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css">
 <body> 
      <div id="warp">
-        <div class="warp_in_header">
-            <div class="logo">
-                <ul>
-                   <li><a href="https://opensea.io/collection/project-spoon-dao"><img src="img/open.png"></a></li>
-                   <li><a href="https://discord.com/invite/9Yh8cdWcRq"><img src="img/disco.png"></a></li>
-                   <li><a href="https://twitter.com/SPOONDAO"><img src="img/twitter.png"></a></li>
-                   <li><a href="https://open.kakao.com/o/gNdEnOPd"><img src="img/ka.png"></a></li>
-               </ul>
+        <section class="sec1">
+            <div class="sec_in">
+                <div class="head clearfix">
+                    <h1><a href="index.html">SPOON WORLD</a></h1>
+                    <ul>
+                        <li><a href="index_rank.html">Rank Search</a></li>
+                        <li><a href="index_Museum.html">Museum</a></li>
+                    </ul>
+                </div>
+                <div class="text_sec">
+                    <p class="h_text_1">How to survive in space?</p>
+                    <p class="h_text_2">Get your own Spoon DAO!</p>
+                </div>
+                <div class="img_sec clearfix">
+                    <div class="num1"><img src="img/icon.png"></div>
+                    <div class="num2"><img src="img/main_logo.png"></div>
+                    <div class="num3"><img src="img/icon2.png"></div>
+                </div>
+                <div class="arm_sec">
+                    <img class="arm" src="img/arm.png">
+                </div>
             </div>
-            <div class="content">
-                <h1 class="main_text">SPOON Rarity Rank ver3.6</h1>
-                <img class="spoon_img" src="img/myspoon.JPG" alt="">
-                <p class="info_t">※사진 로딩이 네트워크 상황에 따라 오래걸릴 수 있습니다.※</p>
-                <p class="info_t">※등급은 만든이가 확률을 보고 임의로 정한 등급입니다.※</p>               
-                <p class="info_t">※값이 이상한 경우 다시 한번 확인 눌러주세요.※</p>
-
-                <form class="form_fild" onsubmit="return false">
-                    <input type='number' placeholder="번호를 입력해주세요." class="textinput" min='1' max='10000'>
-                    <input type='submit' onclick="getInputValue();" value="확인">
-                </form>
+            
+        </section>
+        <section class="sec2">
+            <div class="sec_in">
+                <div class="clearfix">
+                    <div class="info">
+                        <h2>SPOON NFT</h2>
+                        <p>Join the Spoon Project and migrate 10,000 people. <br>
+                            A total of 10,000 spoons of NFT will be issued, <br>
+                            so animals and humans must be paired as partners!
+                        </p>
+                        <div class="button_s">
+                            <a href="https://opensea.io/collection/project-spoon-dao">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="sw">
+                         <div class="wrapper">
+                              <section class="main_section">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="img/3.png"></div>
+                                        <div class="swiper-slide"><img src="img/2.png"></div>
+                                        <div class="swiper-slide"><img src="img/1.png"></div>
+                                        <div class="swiper-slide"><img src="img/4.png"></div>
+                                        <div class="swiper-slide"><img src="img/5.png"></div>
+                                        <div class="swiper-slide"><img src="img/6.png"></div>
+                                        <div class="swiper-slide"><img src="img/7.png"></div>
+                                        <div class="swiper-slide"><img src="img/8.png"></div>
+                                    </div>
+                                </div>
+                                <div class="pagination_container">
+                                    <div style="bottom: -50px; left:76%; transform:translate(-50%, -50%) " class="swiper-pagination"></div>
+                                    <div class="swiper-pagination2"></div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section>
+            <div class="sec3">
+                <div>
+                    <ul>
+                        <li><a href="https://discord.com/invite/9Yh8cdWcRq">Discord</a></li>
+                        <li><a href="https://www.youtube.com/channel/UCTGYka_DozIYpUWP1VvNfJQ">Youtube</a></li>
+                        <li><a href="https://twitter.com/SPOONDAO">Twitter</a></li>
+                        <li><a href="https://open.kakao.com/o/gNdEnOPd">KaKao</a></li>
+                        <li><a href="https://opensea.io/collection/project-spoon-dao">OpenSea</a></li>
+                    </ul>
+                </div>
             </div>
-           
-            <ul class="rank_info">
-
-            </ul>
-        </div>
+        </section>
     </div>  
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.js"></script>
 <script>
-    
-    var valuelist = [];
+    var mainSwiper = new Swiper(".swiper-container", {
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
 
-    function getInputValue(){
-        var input = $('.textinput').val()
-        
-        if(input <= 10000 && input >= 0){
-            
-            
-            var ranknum;
-            
-            $.ajax({
-                url: 'Spoon_rank.CSV',
-                dataType: 'text',
-              }).done(successFunction);
+    var pagingSwiper = new Swiper(".swiper-container", {
+        pagination: {
+            el: ".swiper-pagination2",
+            type: "progressbar",
+        },
+    });
 
-            function successFunction(data){
-                var tmpinput = input - 1
-                var allRows = data.split(/\r?\n|\r/);
-                ranknum = allRows[tmpinput].split(',');
-            }
-            
+    mainSwiper.controller.control = pagingSwiper;
 
-
-            var obj = "https://spoondao.mypinata.cloud/ipfs/QmVPtCyBSA6KcsnZedWAse59pAjJJvei4V7RAcY8wXVGTZ/" + input + ".json"
-            var item = "item.json"
-                        
-            $(document).ready(function(){
-                $.getJSON(obj, function(data){
-                    
-
-
-                    valuelist[0] = data.attributes[0].value
-
-                    valuelist[1] = data.attributes[1].value
-                    valuelist[2] = data.attributes[2].value
-                    valuelist[3] = data.attributes[3].value
-                    valuelist[4] = data.attributes[4].value
-                    valuelist[5] = data.attributes[5].value
-                    valuelist[6] = data.attributes[6].value
-                    valuelist[7] = data.attributes[7].value
-                    valuelist[8] = data.attributes[8].value                    
-                    valuelist[9] = data.attributes[9].value  
-                    valuelist[10] = data.attributes[10].value  
-  
- 
-                    
-                    img = data.image
-                    
-                        
-                    $(".spoon_img").attr("src","")
-                    $(".rank_info").css("display","block")
-
-
-                    $(".spoon_img").attr("src",img)
-
-                    $(document).ready(function(){
-                        $.getJSON(item, function(itemdata){
-                            
-                            $(".rank_info").empty();
-                            $(".rank_info").append("<h1 class='Rank'>4856</h1>");
-                            $(".Rank").text("★ "+ ranknum + "등 ★")
-                            
-                            var listArray = [itemdata.background, itemdata.body, itemdata.eye, itemdata.nose, itemdata.mouth,
-                                             itemdata.cloth, itemdata.hair, itemdata.face,  itemdata.weapon,  itemdata.ani, itemdata.pin]
-                            var list = ["background", "body", "eye", "nose", "mouth", "cloth", "hair" ,"face","weapon","ani","pin"]
-                            var rank_list = ["SSS~D", "SSS~D" ,"SSS~S", "SSS~S", "SSS~S","SSS~D","SSS~C-","SSS~F","SSS~D","none","none"]
-                            
-                            for (var i = 0; i < 11; i++) {
-                                var dataset = listArray[i];
-                                
-                                $.each(dataset, function (idx, row) {
-                                    
-                                    if (dataset[idx].name == valuelist[i]) {
-                                        //alert(dataset[idx]["rank"] + dataset[idx]["name"],dataset[idx]["score"],dataset[idx]["image"]);
-                                        $(".rank_info").append("<li class='bg'><p class='i_name'>" + list[i] + "</p><p style='height:50px' class='i_name'>" + dataset[idx]["name"] + "</p><p class='rank_rond'>" + rank_list[i]  + "</p><p class='mask'><img style='width: 100%;' src='img/mask/"+ dataset[idx]["image"]  +"'></p><p class='na'>"+ dataset[idx]["rank"] +"</p><p class='na'>"+ dataset[idx]["score"] +"</p></li>");
-                                    }
-
-                                    })
-
-                            }      
-                        })
-                    })
-
-
-                })
-            })
-            
-
-
-            
-            
-            
-        }
-    }
-</script>
+  </script>
 </html>

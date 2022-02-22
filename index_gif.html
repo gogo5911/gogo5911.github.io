@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta property="og:type" content="website" /> 
+    <meta property="og:title" content="SPOON Rarity Rank" /> 
+    <meta property="og:site_name" content="SPOON Rarity Rank" /> 
+    <meta property="og:url" content="https://gogo5911.github.io/" /> 
+    <meta property="og:image" content="img/myspoon.png" /> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+<body> 
+     <div id="giftt">
+
+        <div class="ani mo"></div>
+        <div class="background mo"></div>
+        <div class="body mo"></div>
+        <div class="cl mo"></div>
+        <div class="eyes mo"></div>
+        <div class="face mo"></div>
+        <div class="hair mo"></div>
+        <div class="mouth mo"></div>
+        <div class="nose mo"></div>
+        <div class="pin mo"></div>
+        <div class="wp mo"></div>
+        <div class="gif mo"></div>
+        <div class="end ">
+        </div>
+        
+    </div>  
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    for (var i = 1; i < 15; i++) {
+        $(".ani").append("<a class='mo_ani'><img src='img/mask/ani/"+ i +".png'></a>");
+    }
+    for (var i = 1; i < 19; i++) {
+        $(".background").append("<a class='mo_background'><img src='img/mask/background/"+ i +".png'></a>");
+    }
+    $(".background").append("<a class='mo_background'><img src='img/mask/background/founder.png'></a>");
+    $(".background").append("<a class='mo_background'><img src='img/mask/background/rare.png'></a>");
+
+    for (var i = 1; i < 17; i++) {
+        $(".body").append("<a class='mo_body'><img src='img/mask/body/"+ i +".png'></a>");
+    }
+
+    for (var i = 1; i < 38; i++) {
+        $(".cl").append("<a class='mo_cl'><img src='img/mask/cl/"+ i +".png'></a>");
+    }
+    for (var i = 1; i < 10; i++) {
+        $(".eyes").append("<a class='mo_eyes'><img src='img/mask/eyes/"+ i +".png'></a>");
+    }
+    for (var i = 1; i < 25; i++) {
+        $(".face").append("<a class='mo_face'><img src='img/mask/face/"+ i +".png'></a>");
+    }
+    for (var i = 1; i < 41; i++) {
+        $(".hair").append("<a class='mo_hair'><img src='img/mask/hair/"+ i +".png'></a>");
+    }
+    for (var i = 1; i < 11; i++) {
+        $(".mouth").append("<a class='mo_mouth'><img src='img/mask/mouth/"+ i +".png'></a>");
+    }
+    for (var i = 1; i < 5; i++) {
+        $(".nose").append("<a class='mo_nose'><img src='img/mask/nose/"+ i +".png'></a>");
+    }
+    for (var i = 1; i < 20; i++) {
+        $(".fin").append("<a class='mo_fin'><img src='img/mask/fin/"+ i +".png'></a>");
+    }
+    $(".fin").append("<a class='mo_fin'><img src='img/mask/fin/founder.png'></a>");
+    for (var i = 1; i < 30; i++) {
+        $(".wp").append("<a class='mo_wp'><img src='img/mask/wp/"+ i +".png'></a>");
+    }
+    for (var i = 1; i < 10; i++) {
+        $(".gif").append("<a class='mo_gif'><img src='img/mask/gif/"+ i +".gif'></a>");
+    }
+
+
+
+    $('.mo_ani img').click(function(){
+      var src = $(this).attr("src");
+      $(".ani_me").remove();
+      $(".end").append("<img style='z-index:10;' class='ani_me' src='"+ src +"'></a>");
+      
+    });
+
+    $('.mo_background img').click(function(){
+      var src = $(this).attr("src");
+      $(".background_me").remove();
+      $(".end").append("<img style='z-index:1;' class='background_me' src='"+ src +"'></a>");
+      
+    });
+
+    $('.mo_body img').click(function(){
+      var src = $(this).attr("src");
+      $(".body_me").remove();
+      $(".end").append("<img style='z-index:2;' class='body_me' src='"+ src +"'></a>");
+      
+    });
+
+    $('.mo_cl img').click(function(){
+      var src = $(this).attr("src");
+      $(".cl_me").remove();
+      $(".end").append("<img style='z-index:3;' class='cl_me' src='"+ src +"'></a>");
+      
+    });
+    $('.mo_eyes img').click(function(){
+      var src = $(this).attr("src");
+      $(".eyes_me").remove();
+      $(".end").append("<img style='z-index:4;' class='eyes_me' src='"+ src +"'></a>");
+      
+    });
+    $('.mo_face img').click(function(){
+      var src = $(this).attr("src");
+      $(".face_me").remove();
+      $(".end").append("<img style='z-index:5;' class='face_me' src='"+ src +"'></a>");
+      
+    });
+
+    $('.mo_hair img').click(function(){
+      var src = $(this).attr("src");
+      $(".hair_me").remove();
+      $(".end").append("<img style='z-index:4;' class='hair_me' src='"+ src +"'></a>");
+      
+    });
+
+
+    $('.mo_mouth img').click(function(){
+      var src = $(this).attr("src");
+      $(".mouth_me").remove();
+      $(".end").append("<img style='z-index:4;' class='mouth_me' src='"+ src +"'></a>");
+      
+    });
+
+
+
+    $('.mo_nose img').click(function(){
+      var src = $(this).attr("src");
+      $(".nose_me").remove();
+      $(".end").append("<img style='z-index:4;' class='nose_me' src='"+ src +"'></a>");
+      
+    });
+
+    $('.mo_pin img').click(function(){
+      var src = $(this).attr("src");
+      $(".pin_me").remove();
+      $(".end").append("<img style='z-index:10;' class='pin_me' src='"+ src +"'></a>");
+      
+    });
+    $('.mo_wp img').click(function(){
+      var src = $(this).attr("src");
+      $(".wp_me").remove();
+      $(".end").append("<img style='z-index:4;' class='wp_me' src='"+ src +"'></a>");
+      
+    });
+
+      $('.mo_gif img').click(function(){
+      var src = $(this).attr("src");
+      $(".gif_me").remove();
+      $(".end").append("<img style='z-index:1;' class='gif_me' src='"+ src +"'></a>");
+      
+    });
+    
+
+});
+</script>
+
+</html>

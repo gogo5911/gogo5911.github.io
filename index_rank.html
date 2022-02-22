@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta property="og:type" content="website" /> 
+    <meta property="og:title" content="SPOON Rarity Rank" /> 
+    <meta property="og:site_name" content="SPOON Rarity Rank" /> 
+    <meta property="og:url" content="https://gogo5911.github.io/" /> 
+    <meta property="og:image" content="img/myspoon.png" /> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css">
+</head>
+<body> 
+     <div id="warp">
+        <section class="sec1 se_Museum">
+            <div class="sec_in">
+                <div class="head clearfix">
+                     <h1><a href="index.html">SPOON WORLD</a></h1>
+                    <ul>
+                        <li><a style="color:#3c00ff; font-weight: bold" href="index_rank.html">Rank Search</a></li>
+                        <li><a href="index_Museum.html">Museum</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="sec4">
+                <div class="sec_in">
+                    <form class="form_fild" onsubmit="return false">
+                        <input type='number' placeholder="번호를 입력해주세요." class="textinput" min='1' max='10000'>
+                        <input type='submit' class="submit_button" onclick="getInputValue();" value="확인">
+                        <p class="info_t">※ 사진 로딩이 네트워크 상황에 따라 오래걸릴 수 있습니다.</p>
+                        <p class="info_t">※ 등급은 만든이가 확률을 보고 임의로 정한 등급입니다.</p>               
+                        <p class="info_t">※ 값이 이상한 경우 다시 한번 확인 눌러주세요.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="sec5">
+                <div class="sec_in">
+                    <div class="ran_table">
+                        <div class="table_top clearfix">
+                            <div class="t_img">
+                                <img class="spoon_img" src="img/3.png">
+                            </div>
+                            <div class="t_info">
+                                <h1 class="Nom">No.367</h1>
+                                <h2 class="Rank">Rank : </h2>
+                            </div>
+                        </div>
+                        <div class="table_bottom">
+                            <div class="sw">
+                                 <div class="wrapper">
+                                      <section class="main_section">
+                                        <div class="swiper-container">
+                                            <ul class="swiper-wrapper">
+
+                                                <li class="swiper-slide mas_0">
+                                                    <div class="mas_in_0">
+                                                    </div>
+                                                </li>
+                                                <li class="swiper-slide mas_1">
+                                                    <div class="mas_in_1">
+                                                    </div>
+                                                </li>
+                                                <li class="swiper-slide mas_2">
+                                                    <div class="mas_in_2">
+                                                    </div>
+                                                </li>
+                                                <li class="swiper-slide mas_3">
+                                                    <div class="mas_in_3">
+                                                    </div>
+                                                </li>
+                                                <li class="swiper-slide mas_4">
+                                                    <div class="mas_in_4">
+                                                    </div>
+                                                </li>
+                                                <li class="swiper-slide mas_5">
+                                                    <div class="mas_in_5">
+                                                    </div>
+                                                </li>
+                                                <li class="swiper-slide mas_6">
+                                                    <div class="mas_in_6">
+                                                    </div>
+                                                </li>
+                                                <li class="swiper-slide mas_7">
+                                                    <div class="mas_in_7">
+                                                    </div>
+                                                </li>
+                                                <li class="swiper-slide mas_8">
+                                                    <div class="mas_in_8">
+                                                    </div>
+                                                </li>
+                                                <li class="swiper-slide mas_9">
+                                                    <div class="mas_in_9">
+                                                    </div>
+                                                </li>
+                                                <li class="swiper-slide mas_10">
+                                                    <div class="mas_in_10">
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <div class="warp_in_header">
+            
+            <div class="content">
+
+            </div>
+           
+            <ul class="rank_info">
+
+            </ul>
+        </div>
+
+
+        <section>
+            <div class="sec3">
+                <div>
+                    <ul>
+                        <li><a href="https://discord.com/invite/9Yh8cdWcRq">Discord</a></li>
+                        <li><a href="https://www.youtube.com/channel/UCTGYka_DozIYpUWP1VvNfJQ">Youtube</a></li>
+                        <li><a href="https://twitter.com/SPOONDAO">Twitter</a></li>
+                        <li><a href="https://open.kakao.com/o/gNdEnOPd">KaKao</a></li>
+                        <li><a href="https://opensea.io/collection/project-spoon-dao">OpenSea</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+    </div>  
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.js"></script>
+<script>
+    const swiper = new Swiper('.swiper-container', {
+          direction: 'horizontal',
+          slidesPerView: 3,
+          spaceBetween: 30,
+          debugger: true,
+          mousewheel: true,
+          loop: true,
+          centeredSlides: true,
+      autoplay: {
+
+        delay: 2500,
+        disableOnInteraction: false,
+       },
+  
+
+      pagination: {
+
+        el: '.swiper-pagination',
+
+        clickable: true,
+      },
+
+      navigation: {
+        //다음페이지 설정
+        nextEl: '.swiper-button-next',
+        //이전페이지 설정
+        prevEl: '.swiper-button-prev',
+      },
+  
+});
+
+
+  </script>
+<script>
+    
+    var valuelist = [];
+
+    function getInputValue(){
+        var input = $('.textinput').val()
+        
+        if(input <= 10000 && input >= 0){
+            
+            
+
+            var ranknum;
+            
+            $.ajax({
+                url: 'Spoon_rank.CSV',
+                dataType: 'text',
+              }).done(successFunction);
+
+            function successFunction(data){
+                var tmpinput = input - 1
+                var allRows = data.split(/\r?\n|\r/);
+                ranknum = allRows[tmpinput].split(',');
+            }
+            
+
+
+            var obj = "https://spoondao.mypinata.cloud/ipfs/QmVPtCyBSA6KcsnZedWAse59pAjJJvei4V7RAcY8wXVGTZ/" + input + ".json"
+            var item = "item.json"
+                        
+            $(document).ready(function(){
+                $.getJSON(obj, function(data){
+                    
+
+
+                    valuelist[0] = data.attributes[0].value
+
+                    valuelist[1] = data.attributes[1].value
+                    valuelist[2] = data.attributes[2].value
+                    valuelist[3] = data.attributes[3].value
+                    valuelist[4] = data.attributes[4].value
+                    valuelist[5] = data.attributes[5].value
+                    valuelist[6] = data.attributes[6].value
+                    valuelist[7] = data.attributes[7].value
+                    valuelist[8] = data.attributes[8].value                    
+                    valuelist[9] = data.attributes[9].value  
+                    valuelist[10] = data.attributes[10].value  
+  
+ 
+                    
+                    img = data.image
+                    
+                        
+                    $(".spoon_img").attr("src","")
+                    $(".spoon_img").attr("src",img)
+                    $(".Nom").text("No." + input)
+
+
+                    
+
+                    $(document).ready(function(){
+                        $.getJSON(item, function(itemdata){
+                            
+
+
+                            $(".Rank").text("Rank : " + ranknum )
+                            
+                            var listArray = [itemdata.background, itemdata.body, itemdata.eye, itemdata.nose, itemdata.mouth,
+                                             itemdata.cloth, itemdata.hair, itemdata.face,  itemdata.weapon,  itemdata.ani, itemdata.pin]
+                            var list = ["background", "body", "eye", "nose", "mouth", "cloth", "hair" ,"face","weapon","ani","pin"]
+                            var rank_list = ["SSS~D", "SSS~D" ,"SSS~S", "SSS~S", "SSS~S","SSS~D","SSS~C-","SSS~F","SSS~D","none","none"]
+                            
+                            for (var i = 0; i < 11; i++) {
+                                var dataset = listArray[i];
+                                
+                                $.each(dataset, function (idx, row) {
+                                    
+                                    if (dataset[idx].name == valuelist[i]) {
+
+                                        var classname = ".mas_in_" + i
+                                        var classnam = ".mas_" + i
+
+                                        $(classname).empty();
+                                        $(classnam).append("<div class='" + classname +"></div>");
+
+                                        
+                                        //alert(dataset[idx]["rank"] + dataset[idx]["name"],dataset[idx]["score"],dataset[idx]["image"]);
+                                        $(classname).append("<p class='mask'><img style='width: 100%;' src='img/mask/"+ dataset[idx]["image"]  +"'></p><p style='height:50px' class='i_name'>Name : " + dataset[idx]["name"] + "</p><p class='na'>Rank : "+ dataset[idx]["rank"] +"</p><p class='na'>Percentage"+ dataset[idx]["score"] +"%</p>");
+                                    }
+
+                                    })
+
+                            }      
+                        })
+                    })
+
+
+                })
+            })
+            
+
+
+            
+            
+            
+        }
+    }
+</script>
+</html>
