@@ -152,8 +152,7 @@ section .sec_in{width: 100%;width: 1189px; display: grid; margin: 0 auto; box-si
     padding: 8px;}
 .sec4 .submit_button{height: 55px; width:80px; background-color: #fff; border: 1px solid rgb(118, 118, 118)}
 .sec4 .info_t{line-height:35px}
-
-
+.sec5 {margin-bottom: 200px}
 .sec5 .ran_table{margin-top:200px; width: 1127px; border: 1px solid rgb(118, 118, 118); padding:30px;}
 .sec5 .table_top {margin-bottom: 50px}
 .sec5 .table_top .t_img{ float: left}
