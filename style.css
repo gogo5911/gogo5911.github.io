@@ -160,3 +160,6 @@ section .sec_in{width: 100%;width: 1189px; display: grid; margin: 0 auto; box-si
 .sec5 .table_top .t_info{float: left}
 .sec5 .table_top .t_info h1{margin-top:85px;font-size: 100px; width:590px; font-weight: bold; color: #000;font-family: 'nanum_extrabold'; padding-bottom: 25px; border-bottom: 1px solid #bbb}
 .sec5 .table_top .t_info h2{margin-top:50px; font-size: 50px; width:590px; font-weight: bold; color: #000;font-family: 'nanum_extrabold'; padding-bottom: 25px;}
+.sec5 .swiper-slide{padding:15px; box-sizing: content-box;}
+.sec5 .swiper-slide p{padding-top: 5px; }
+

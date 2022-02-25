@@ -157,8 +157,8 @@
 <script>
     const swiper = new Swiper('.swiper-container', {
           direction: 'horizontal',
-          slidesPerView: 3,
-          spaceBetween: 30,
+          slidesPerView: 5,
+          spaceBetween: 10,
           debugger: true,
           loop: true,
           centeredSlides: true,
@@ -244,6 +244,9 @@
                     $(".Nom").text("No." + input)
 
                     $(".swiper-slide").css("border","1px solid rgb(118, 118, 118)")
+                    $(".swiper-slide").css("background-color","#f4f4f4")
+
+
 
                     $(document).ready(function(){
                         $.getJSON(item, function(itemdata){
