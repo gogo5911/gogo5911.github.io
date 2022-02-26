@@ -13,6 +13,9 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
 
 <body> 
+
+  <button type="button" class="btnScreenShot" id="bbu">스크린샷</button>
+
      <div id="giftt">
 
         <div class="ani mo"></div>
@@ -26,14 +29,42 @@
         <div class="nose mo"></div>
         <div class="pin mo"></div>
         <div class="wp mo"></div>
-        <div class="gif mo"></div>
-        <div class="end ">
+        <div style="height: 300px;" id="mydiv" class="end">
         </div>
         
     </div>  
+
+
+    
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+<script> 
+
+function PrintDiv(div){
+  div = div[0];
+  html2canvas(div).then(function(canvas){
+    var myImage = canvas.toDataURL();
+    downloadURI(myImage, "s.png");
+  });
+}
+
+function downloadURI(uri, name){
+  var link = document.createElement('a'); 
+  link.download = name;
+  link.href = uri;
+  document.body.appendChild(link); 
+  link.click();
+}
+
+$('#bbu').click(function(){
+  PrintDiv($('#mydiv'));
+});
+</script>
+
+
 <script>
 $(document).ready(function(){
     for (var i = 1; i < 27; i++) {
@@ -55,7 +86,7 @@ $(document).ready(function(){
     for (var i = 1; i < 10; i++) {
         $(".eyes").append("<a class='mo_eyes'><img src='img/mask/eyes/"+ i +".png'></a>");
     }
-    for (var i = 1; i < 25; i++) {
+    for (var i = 1; i < 24; i++) {
         $(".face").append("<a class='mo_face'><img src='img/mask/face/"+ i +".png'></a>");
     }
     for (var i = 1; i < 47; i++) {
@@ -74,9 +105,7 @@ $(document).ready(function(){
     for (var i = 1; i < 30; i++) {
         $(".wp").append("<a class='mo_wp'><img src='img/mask/wp/"+ i +".png'></a>");
     }
-    for (var i = 1; i < 10; i++) {
-        $(".gif").append("<a class='mo_gif'><img src='img/mask/gif/"+ i +".gif'></a>");
-    }
+
 
 
 
@@ -157,12 +186,7 @@ $(document).ready(function(){
       
     });
 
-      $('.mo_gif img').click(function(){
-      var src = $(this).attr("src");
-      $(".gif_me").remove();
-      $(".end").append("<img style='z-index:1;' class='gif_me' src='"+ src +"'></a>");
-      
-    });
+
     
 
 });
