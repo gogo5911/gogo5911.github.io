@@ -71,6 +71,19 @@
                     <div class="wrapper">
                         <section class="main_section">
                             <div class="swiper-container2">
+                                <div class="swiper-wrapper sp">
+                                    <div class="swiper-slide sdf"><img src="img/mask/sp/1.png"></div>
+                                    <div class="swiper-slide sdf"><img src="img/mask/sp/1.png"></div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+               <div class="sw">
+                    <div class="wrapper">
+                        <section class="main_section">
+                            <div class="swiper-container2">
                                 <div class="swiper-wrapper body">
                                     <div class="swiper-slide sdf"><img src="img/mask/body/1.png"></div>
                                     <div class="swiper-slide sdf"><img src="img/mask/body/1.png"></div>
@@ -113,6 +126,19 @@
                                 <div class="swiper-wrapper face">
                                     <div class="swiper-slide sdf"><img src="img/mask/face/1.png"></div>
                                     <div class="swiper-slide sdf"><img src="img/mask/face/1.png"></div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="sw">
+                    <div class="wrapper">
+                        <section class="main_section">
+                            <div class="swiper-container2">
+                                <div class="swiper-wrapper face2">
+                                    <div class="swiper-slide sdf"><img src="img/mask/face2/1.png"></div>
+                                    <div class="swiper-slide sdf"><img src="img/mask/face2/1.png"></div>
                                 </div>
                             </div>
                         </section>
@@ -184,7 +210,23 @@
                     </div>
                 </div>
 
+                
+
             </div>
+    </section>
+
+    <section style="margin-top: 150px;">
+        <div class="sec3">
+            <div>
+                <ul>
+                    <li><a href="https://discord.com/invite/9Yh8cdWcRq">Discord</a></li>
+                    <li><a href="https://www.youtube.com/channel/UCTGYka_DozIYpUWP1VvNfJQ">Youtube</a></li>
+                    <li><a href="https://twitter.com/SPOONDAO">Twitter</a></li>
+                    <li><a href="https://open.kakao.com/o/gNdEnOPd">KaKao</a></li>
+                    <li><a href="https://opensea.io/collection/project-spoon-dao">OpenSea</a></li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     
@@ -205,12 +247,12 @@
       for (var i = 1; i < 27; i++) {
           $(".ani").append("<div class='swiper-slide'><a style=' display:block' class='mo_ani'><img src='img/mask/ani/"+ i +".png'></a></div>");
       }
-      for (var i = 1; i < 19; i++) {
+      for (var i = 1; i < 20; i++) {
           $(".background").append("<div class='swiper-slide'><a style='display:block' class='mo_background'><img src='img/mask/background/"+ i +".png'></a></div>");
       }
       $(".background").append("<div class='swiper-slide'><a style='display:block' class='mo_background'><img src='img/mask/background/founder.png'></a></div>");
       $(".background").append("<div class='swiper-slide'><a style=' display:block' class='mo_background'><img src='img/mask/background/rare.png'></a></div>");
-  
+      
 
       for (var i = 1; i < 17; i++) {
           $(".body").append("<div class='swiper-slide'><a style=' display:block' class='mo_body'><img src='img/mask/body/"+ i +".png'></a></div>");
@@ -222,9 +264,15 @@
       for (var i = 1; i < 10; i++) {
           $(".eye").append("<div class='swiper-slide'><a style='display:block' class='mo_eyes'><img src='img/mask/eyes/"+ i +".png'></a></div>");
       }
-      for (var i = 1; i < 24; i++) {
+      for (var i = 1; i < 25; i++) {
           $(".face").append("<div class='swiper-slide'><a style='display:block' class='mo_face'><img src='img/mask/face/"+ i +".png'></a></div>");
       }
+
+      for (var i = 1; i < 3; i++) {
+          $(".face2").append("<div class='swiper-slide'><a style='display:block' class='mo_face2'><img src='img/mask/face2/"+ i +".png'></a></div>");
+      }
+
+
       for (var i = 1; i < 47; i++) {
           $(".hair").append("<div class='swiper-slide'><a style='display:block' class='mo_hair'><img src='img/mask/hair/"+ i +".png'></a></div>");
       }
@@ -238,8 +286,11 @@
           $(".fin").append("<div class='swiper-slide'><a style=' display:block' class='mo_fin'><img src='img/mask/pin/"+ i +".png'></a></div>");
       }
       $(".fin").append("<div class='swiper-slide'><a style='display:block' class='mo_fin'><img src='img/mask/pin/founder.png'></a>/div>");
-      for (var i = 1; i < 30; i++) {
+      for (var i = 1; i < 31; i++) {
           $(".wp").append("<div class='swiper-slide'><a style='display:block' class='mo_wp'><img src='img/mask/wp/"+ i +".png'></a></div>");
+      }
+      for (var i = 1; i < 3; i++) {
+          $(".sp").append("<div class='swiper-slide'><a style='display:block' class='mo_sp'><img src='img/mask/sp/"+ i +".png'></a></div>");
       }
   
       $('.mo_ani img').click(function(){
@@ -281,6 +332,13 @@
         $(".end").append("<img style='z-index:5;' class='face_me' src='"+ src +"'></a>");
         
       });
+
+      $('.mo_face2 img').click(function(){
+        var src = $(this).attr("src");
+        $(".face_me2").remove();
+        $(".end").append("<img style='z-index:5;' class='face_me2' src='"+ src +"'></a>");
+        
+      });
   
       $('.mo_hair img').click(function(){
         var src = $(this).attr("src");
@@ -316,6 +374,13 @@
         var src = $(this).attr("src");
         $(".wp_me").remove();
         $(".end").append("<img style='z-index:4;' class='wp_me' src='"+ src +"'></a>");
+        
+      });
+
+      $('.mo_sp img').click(function(){
+        var src = $(this).attr("src");
+        $(".sp_me").remove();
+        $(".end").append("<img style='z-index:1;' class='sp_me' src='"+ src +"'></a>");
         
       });
   
