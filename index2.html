@@ -5,33 +5,79 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>JoCoding Club Minitng</title>
+	<title>Skeleton Minitng</title>
 	<script src="config.js"></script>
 	<script src="mintScript.js"></script>
+	<link rel="stylesheet" type="text/css" href="index2.css" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/8.0.2/bignumber.js" integrity="sha512-XQDG6H87RgMf+aNFwDPCUcFwUf3t9liyqN/2BkJ8KGixupbjPwQHNhypNA972mLIkg4KPo4lkGmqAf3yfDz8hw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
-	<h2>MINTING INFO</h2>
-	<p id="blockNubmer">현재 블록: #00000000</p>
-	<p id="mintStartBlockNumber">민팅 시작 블록: #00000000</p>
-	<p id="mintPrice">민팅 가격: 0 KLAY</p>
-	<p id="mintLimitPerBlock">트랜잭션당 최대 수량: 0개</p>
-	<a href="https://scope.klaytn.com/">현재 블록넘버 확인하기1(Klaytnscope)</a><br>
-	<a href="https://klayswap.com/">현재 블록넘버 확인하기2(Klayswap)</a><br>
-	<hr/>
-	<h2>MY WALLET</h2>
-	<button onclick="connect()">카이카스 지갑연결</button>
-	<p id="myWallet">지갑주소: 연결되지 않음</p>
-	<p id="myKlay">잔액: 연결되지 않음</p>
-	<hr/>
-	<h2>MINT</h2>
-	<p id="mintCnt">0 / 0</p>
-	<label for="amount">민팅 수량</label>
-	<input type="number" id="amount" name="amount" min="1" max="3" value="1">
-	<button onclick="publicMint()">민팅</button>
-	<hr/>
-	<footer style="text-align: center;">Copyright &copy; 2022 <a href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg">JoCoding</a> All rights reserved</footer>
+<!-- skip -->
+<dl class="skip">
+	<dt class="blind"><strong>skip navigation</strong></dt>
+	<dd><a href="#container">skip to Contents</a></dd>
+</dl>
+<!-- //skip -->
+<hr>
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div id="container">
+		<!-- content -->
+		<div id="content">
+			<div class="login">
+				<div class="login_background">
+					<div class="img">
+						<img class="bg" src="img/main_login.jpg" alt="">
+					</div>
+				</div>
+				<div class="login_main">
+					<div class="main_Logo">
+						<a href="#"><img src="img/Logo.png" alt="CVLAB_LOGO"></a>
+					</div>
+					<div class="main_info">
+						<h2>MINTING INFO</h2>
+						<p id="blockNubmer">현재 블록: #00000000</p>
+						<p id="mintStartBlockNumber">민팅 시작 블록: #00000000</p>
+						<p id="mintPrice">민팅 가격: 0 KLAY</p>
+						<p id="mintLimitPerBlock">트랜잭션당 최대 수량: 0개</p>
+					</div>
+					<div class="Wallet">
+						<h2>MY WALLET</h2>
+						
+						<p id="myWallet">지갑주소: 연결되지 않음</p>
+						<p id="myKlay">잔액: 연결되지 않음</p>
+					</div>
+					<div class="login_information">
+						<h2>MINT</h2>
+						<p id="mintCnt">0 / 0</p>
+						<div class="minla">
+							<label for="amount">민팅 수량</label>
+							<input type="number" id="amount" name="amount" min="1" max="3" value="1">
+						</div>
+
+						<div class="login_submit">
+							<button style="margin-bottom: 10px" onclick="publicMint()">민팅</button>
+							<button onclick="connect()">지갑연결</button>
+						</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //content -->
+	</div>
+	<!-- //container -->
+	<!-- footer -->
+	<div id="footer">
+	</div>
+	<!-- //footer -->
+</div>
+</body>
 	<script>
 		document.addEventListener("DOMContentLoaded", async function (event) {
 			const accounts = await klaytn.enable();
@@ -41,6 +87,4 @@
 			check_status();
 		});
 	</script>
-</body>
-
 </html>
